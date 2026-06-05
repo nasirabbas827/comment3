@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_password = $_POST["new_password"];
 
     // Update moderator information in the database
-    $update_query = "UPDATE moderators SET name='$new_name', username='$new_username', email='$new_email', password='$new_password' WHERE id='$moderator_id'";
+    $update_query = "UPDATE moderators SET name='$new_name', username='$new_username', email='$new_email', password="YOUR_OWN_API_KEY" WHERE id='$moderator_id'";
 
     if ($conn->query($update_query) === TRUE) {
         echo "Moderator information updated successfully!";
