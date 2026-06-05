@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $admin_password = $_POST["admin_password"];
 
     // Validate admin login credentials (you should use secure authentication mechanisms)
-    $query = "SELECT * FROM admin WHERE username='$admin_username' AND password='$admin_password'";
+    $query = "SELECT * FROM admin WHERE username='$admin_username' AND password="YOUR_OWN_API_KEY"";
     $result = $conn->query($query);
 
     if ($result->num_rows == 1) {
