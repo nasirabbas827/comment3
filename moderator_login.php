@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $moderator_password = $_POST["moderator_password"];
 
     // Check the username and password against the database
-    $query = "SELECT * FROM moderators WHERE username = '$moderator_username' AND password = '$moderator_password'";
+    $query = "SELECT * FROM moderators WHERE username = '$moderator_username' AND password = "YOUR_OWN_API_KEY"";
     $result = $conn->query($query);
 
     if ($result->num_rows == 1) {
