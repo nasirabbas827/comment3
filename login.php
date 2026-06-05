@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     // Validate login credentials (you should use secure authentication mechanisms)
-    $query = "SELECT * FROM users WHERE username='$username' AND password='$password' AND status='approved'";
+    $query = "SELECT * FROM users WHERE username='$username' AND password="YOUR_OWN_API_KEY" AND status='approved'";
     $result = $conn->query($query);
 
     if ($result->num_rows == 1) {
